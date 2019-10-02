@@ -111,7 +111,7 @@ pub struct FileParts(Vec<(String, Result<File, Error>)>);
 /// A tempfile wrapper that includes the original filename
 #[derive(Debug)]
 pub struct File {
-    inner: NamedTempFile,
+    pub inner: NamedTempFile,
     original_file_name: Option<String>,
     sanitized_file_name: String,
 }
